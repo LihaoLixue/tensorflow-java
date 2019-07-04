@@ -1,3 +1,5 @@
+package com.tensorflow.model.java.two;
+
 import org.apache.commons.io.IOUtils;
 import org.tensorflow.Graph;
 import org.tensorflow.Session;
@@ -15,7 +17,7 @@ public class reload_3 {
     public static void main(String[] args) throws IOException {
         try (Graph graph = new Graph()) {
             //导入图
-            byte[] graphBytes = IOUtils.toByteArray(new FileInputStream("/Users/lixuewei/workspace/private/tensorflow-java/src/main/resources/model_3.pb"));
+            byte[] graphBytes = IOUtils.toByteArray(new FileInputStream("/Users/lixuewei/workspace/private/tensorflow-java/model_2/src/main/model/model_3.pb"));
             graph.importGraphDef(graphBytes);
 
             //根据图建立Session

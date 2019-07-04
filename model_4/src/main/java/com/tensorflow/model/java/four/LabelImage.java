@@ -1,4 +1,4 @@
-/**
+package com.tensorflow.model.java.four; /**
  * Created on 2019-07-03
  *
  * @author :hao.li
@@ -45,7 +45,7 @@ public class LabelImage {
         s.println("to label JPEG images.");
         s.println("TensorFlow version: " + TensorFlow.version());
         s.println();
-        s.println("Usage: label_image <model dir> <image file>");
+        s.println("Usage: label_image <model dΩ`                            +ir> <image file>");
         s.println();
         s.println("Where:");
         s.println("<model dir> is a directory containing the unzipped contents of the inception model");
@@ -60,8 +60,8 @@ public class LabelImage {
 //        }
 //        String modelDir = args[0];
 //        String imageFile = args[1];
-        String modelDir = "/Users/lixuewei/workspace/private/tensorflow-java/src/main/models/";
-        String imageFile = "/Users/lixuewei/workspace/private/tensorflow-java/src/main/images/example-400x288.jpg";
+        String modelDir = "/Users/lixuewei/workspace/private/tensorflow-java/model_4/src/main/models/";
+        String imageFile = "/Users/lixuewei/workspace/private/tensorflow-java/model_4/src/main/images/example-400x288.jpg";
 
         byte[] graphDef = readAllBytesOrExit(Paths.get(modelDir, "tensorflow_inception_graph.pb"));
         List<String> labels =

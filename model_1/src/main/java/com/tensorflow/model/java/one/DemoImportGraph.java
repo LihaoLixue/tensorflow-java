@@ -1,3 +1,5 @@
+package com.tensorflow.model.java.one;
+
 import org.apache.commons.io.IOUtils;
 import org.tensorflow.Graph;
 import org.tensorflow.Session;
@@ -11,7 +13,7 @@ public class DemoImportGraph {
     public static void main(String[] args) throws IOException {
         try (Graph graph = new Graph()) {
             //导入图
-            byte[] graphBytes = IOUtils.toByteArray(new FileInputStream("/Users/lixuewei/workspace/private/tensorflow-java/src/main/resources/model.pb"));
+            byte[] graphBytes = IOUtils.toByteArray(new FileInputStream("/Users/lixuewei/workspace/private/tensorflow-java/model_1/src/main/model/model.pb"));
             graph.importGraphDef(graphBytes);
 
             //根据图建立Session
@@ -20,7 +22,7 @@ public class DemoImportGraph {
                 Tensor tensor = session.runner()
                         .feed("x", Tensor.create(10.0f))
                         .fetch("z").run().get(0);
-                System.out.println(tensor.dataType());
+                System.out.println(tensor.floatValue());
             }
         }
 
