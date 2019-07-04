@@ -1,4 +1,4 @@
-package model5;
+package com.tensorflow.modle.java.three;
 
 /**
  * Created on 2019-07-03

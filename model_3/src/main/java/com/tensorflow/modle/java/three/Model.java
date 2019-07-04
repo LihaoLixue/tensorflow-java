@@ -1,4 +1,4 @@
-package model5;
+package com.tensorflow.modle.java.three;
 
 /**
  * Created on 2019-07-03
@@ -17,7 +17,7 @@ public class Model {
 
     public void init() {
 //        String classpath = this.getClass().getResource("/").getPath() + "1";
-        String classpath = "/Users/lixuewei/workspace/private/tensorflow-java/src/main/model/1/";
+        String classpath = "/Users/lixuewei/workspace/private/tensorflow-java/model_three/src/main/model/1/";
         bundle = TensorflowUtils.loadmodel(classpath);
     }
 
